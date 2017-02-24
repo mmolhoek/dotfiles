@@ -1,6 +1,6 @@
 [user]
-  email = jamie@lico.nl
-  name = Jamie Schembri
+  email = mischamolhoek@gmail.com
+  name = Mischa Molhoek
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim

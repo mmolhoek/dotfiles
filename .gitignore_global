@@ -41,6 +41,7 @@
 *~
 .netrwhist
 Session.vim
+vim.vim
 .projectile
 
 # Tool files #

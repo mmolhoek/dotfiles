@@ -2,22 +2,21 @@
 
 ## Summary
 
-These are my dotfiles. They were created using the [bare git repo method](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/) (though I've opted for ~/.dotfiles over ~/.cfg) in order to sidestep the whole symlink nonsense. 
+These are my dotfiles. My base to start was [Jamie Schembri's](https://github.com/shkm/dotfiles) dotfiles, Thank you Jamie!
 
 ## Requirements
 
-- git
+- curl
 
 ## Installation
 
-There's a simple init script available for MacOS. I haven't had the chance to test this yet, but it should set up the basics.
+Whenever I buy a new laptop, or have to reinstall my system, after installing the base OS (OSX or linux) all i have to do is:
 
+for OSX
 ```
-curl -s https://raw.githubusercontent.com/shkm/dotfiles/master/scripts/init_mac.sh | bash -s
+curl -s https://raw.githubusercontent.com/mmolhoek/dotfiles/master/scripts/init_mac.sh | bash -s
 ```
 
-## Additional thoughts
+## Todo's
 
-- Consider writing a snippet to pull these down for the first time, as described in the article above.
-- An init script can still be useful, particularly for default OS settings. Perhaps that's something for another repo, though?
-
+* create script for linux version of dotfiles

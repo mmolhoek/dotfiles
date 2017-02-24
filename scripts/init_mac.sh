@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 
-echo "~~> Installing homebrew…"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ ! -d /usr/local/Homebrew ];then
+  echo "~~> Installing homebrew…"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "~~> Homebrew is installed already, skipping"
+fi
 
 echo "~~> Installing brew packages…"
 $(brew install \
@@ -9,7 +13,6 @@ $(brew install \
   zsh\
   neovim/neovim/neovim\
   getantibody/homebrew-antibody/antibody\
-  shkm/brew/vssh\
   mas\
   diff-so-fancy\
 )
@@ -17,22 +20,11 @@ $(brew install \
 echo "~~> Installing cask brew packages…"
 $(brew cask install \
   google-chrome\
-  dropbox\
   alfred\
-  hipchat\
   caskroom/versions/iterm2-beta\
-  virtualbox\
-  vagrant\
-  chruby\
-  ruby-build\
   caskroom/fonts/font-hasklig\
   caskroom/fonts/font-fira-code\
 )
 
 echo "~~> Grabbing dotfiles…"
-git clone --bare https://github.com/shkm/dotfiles.git $HOME/.dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dotfiles config --local status.showUntrackedFiles no
-
-
-
+git clone https://github.com/mmolhoek/dotfiles.git $HOME/.dotfiles
