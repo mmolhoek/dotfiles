@@ -40,8 +40,8 @@ export LC_ALL="en_GB.UTF-8"
 stty -ixon
 
 # Personal
-export EMAIL="jamie@schembri.me"
-export NAME="Jamie Schembri"
+export EMAIL="mischamolhoek@gmail.com"
+export NAME="Mischa Molhoek"
 export SMTPSERVER="smtp.gmail.com"
 
 export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man nomod nolist nonu noma' -\""
